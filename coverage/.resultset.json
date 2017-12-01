@@ -869,6 +869,7 @@
       ],
       "/Users/Guest/Desktop/craftsy/app/models/user.rb": [
         1,
+        1,
         null,
         null,
         1,
@@ -970,6 +971,8 @@
       "/Users/Guest/Desktop/craftsy/app/models/product.rb": [
         1,
         1,
+        null,
+        1,
         null
       ],
       "/Users/Guest/Desktop/craftsy/spec/factories.rb": [
@@ -1018,6 +1021,6 @@
         null
       ]
     },
-    "timestamp": 1512157494
+    "timestamp": 1512163299
   }
 }

@@ -2,6 +2,7 @@
 <h3><%= @product.desc %></h3>
 <h3><%= @product.price %></h3>
 
+<!-- 'if @product.user_id == current_user.id' prevents edit/delete from showing up for wrong users -->
 <div class="links btn-group">
   <% if user_signed_in? %>
     <% if @product.user_id == current_user.id %>
