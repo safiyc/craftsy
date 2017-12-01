@@ -9,13 +9,13 @@
   </head>
 
   <body>
-    <nav class= "nav navbar-default">
+    <nav class= "navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <%= link_to "Craftsy", root_path, class: "navbar_brand" %>
         </div>
 
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="navbar navbar-nav navbar-right">
           <% if user_signed_in? %>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           <% else %>
@@ -24,7 +24,7 @@
           <% end %>
         </ul>
 
-        <ul class="nav navbar-nav">
+        <ul class="navbar navbar-nav">
           <% if user_signed_in? %>
             <li><%= link_to "Add Product", new_product_path %></li>
           <% end %>
