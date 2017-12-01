@@ -1,4 +1,11 @@
-<h3>Edit Product</h3>
- <%= render 'form' %>
+<h1>Edit Product</h1>
 
- <p><%= link_to "Return to product", product_path %></p>
+<%= simple_form_for @product, html: {multipart: true} do |f| %>
+  <%= f.select :category_id, @categories %>
+  <%= f.input :name, label: "Product" %>
+  <%= f.input :desc, label: "Description" %>
+  <%= f.input :price %>
+  <%= f.button :submit %>
+<% end %>
+
+<p><%= link_to "Return to product", product_path %></p>

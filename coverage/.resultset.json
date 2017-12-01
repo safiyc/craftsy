@@ -920,21 +920,27 @@
         1,
         0,
         null,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
         null,
         1,
         0,
         null,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
         null,
         1,
+        0,
         null,
-        null,
-        1,
         0,
         0,
         null,
@@ -968,7 +974,13 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/craftsy/app/models/category.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/Guest/Desktop/craftsy/app/models/product.rb": [
+        1,
         1,
         1,
         null,
@@ -977,6 +989,9 @@
       ],
       "/Users/Guest/Desktop/craftsy/spec/factories.rb": [
         1,
+        1,
+        1,
+        null,
         1,
         null,
         null,
@@ -1004,6 +1019,13 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/craftsy/spec/models/category_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
       "/Users/Guest/Desktop/craftsy/spec/models/product_spec.rb": [
         1,
         null,
@@ -1021,6 +1043,6 @@
         null
       ]
     },
-    "timestamp": 1512163299
+    "timestamp": 1512165053
   }
 }
