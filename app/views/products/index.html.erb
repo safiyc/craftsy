@@ -3,7 +3,12 @@
 <% if @products.count == 0 %>
   <h3>There are no products in this category</h3>
 <% else %>
-  <% @products.each do |product| %>
-    <h2> <%= link_to product.name, product_path(product) %></h2>
+  <div class="row">
+    <% @products.each do |product| %>
+    <div class="col-md-3">
+      <a href="/products/ <%= product.id %>"></a>
+      <%= image_tag product.product_img.url(:product_index), class: "product" %>
+    </div>
+  </div>
   <% end %>
 <% end %>
