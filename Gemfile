@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise', '~> 4.3.0'
+gem 'paperclip', '~> 5.0.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
