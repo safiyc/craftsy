@@ -8,6 +8,12 @@
 			<div class="col-md-3">
 				<a href="/products/ <%= product.id %>">
 					<%= image_tag product.product_img.url(:product_index), class: "product" %>
+				<br>
+				<br>
+				<div class="text-centered">
+					<p><%= product.name %></p>
+					<p>$<%= product.price %></p>
+				</div>
 				</a>
 			</div>
 		<% end %>
