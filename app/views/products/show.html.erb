@@ -33,3 +33,14 @@
     <% end %>
   <% end %>
 </div>
+
+<!-- script is part of jquery.raty; look at '_review.html.erb' for connection -->
+<script>
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
