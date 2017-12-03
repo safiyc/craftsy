@@ -21,11 +21,11 @@ category = [
 ]
 
 product = [
-  [ "Wooden Spatula", "This spatula is made from redwood.", 7, 1, 3, "wooden_spatula.jpg", "image/jpeg"],
-  [ "Kirbys", "These Kirby plushies are super adorable.", 9, 1, 4, "plushy1.jpg", "image/jpeg"],
-  [ "Leather Bag", "This handcrafted bag combines style with sturdiness to make for a great daily use.", 25, 1, 2, "accessory1.jpg", "image/jpeg"],
-  [ "Silver Charm Bracelet", "Simple and elegant. A great gift for your special someone.", 13, 1, 2, "accessory2.jpg", "image/jpeg"],
-  [ "Pokemon", "Eevee, one of the original Pokemons. Super cute.", 9, 1, 4, "plushy3.jpg", "image/jpeg"],
+  ["Kirbys", "These Kirby plushies are super adorable.", 9, 1, 4, "plushy1.jpg", "image/jpeg"],
+  ["Wooden Spatula", "This spatula is made from redwood.", 7, 1, 3, "wooden_spatula.jpg", "image/jpeg"],
+  ["Leather Bag", "This handcrafted bag combines style with sturdiness to make for a great daily use.", 25, 1, 2, "accessory1.jpg", "image/jpeg"],
+  ["Silver Charm Bracelet", "Simple and elegant. A great gift for your special someone.", 13, 1, 2, "accessory2.jpg", "image/jpeg"],
+  ["Pokemon", "Eevee, one of the original Pokemons. Super cute.", 9, 1, 4, "plushy3.jpg", "image/jpeg"],
 ]
 
 category.each do |name|

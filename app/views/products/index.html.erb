@@ -6,8 +6,9 @@
   <div class="row">
     <% @products.each do |product| %>
     <div class="col-md-3">
-      <a href="/products/ <%= product.id %>"></a>
-      <%= image_tag product.product_img.url(:product_index), class: "product" %>
+      <a href="/products/ <%= product.id %>">
+        <%= image_tag product.product_img.url(:product_index), class: "product" %>
+      </a>
     </div>
   </div>
   <% end %>
