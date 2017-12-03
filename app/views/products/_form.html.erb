@@ -3,6 +3,6 @@
   <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category") %>
   <%= f.input :name, label: "Product" %>
   <%= f.input :desc, label: "Description" %>
-  <%= f.input :price %>
+  <%= f.input :price, placeholder: "please enter in 0.00 format" %>
   <%= f.button :submit %>
 <% end %>

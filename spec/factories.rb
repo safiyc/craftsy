@@ -15,8 +15,8 @@ FactoryBot.define do
   factory(:product) do
     name('Spatula')
     desc('This handmade spatula is made with redwood.')
-    price(15)
-    user_id(1)
+    price('15')
+    user_id(2)
     category_id(2)
   end
 end
