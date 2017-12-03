@@ -1,15 +1,15 @@
 <h1 class="current-category"><%= params[:category] %></h1>
 
 <% if @products.count == 0 %>
-  <h3>There are no products in this category</h3>
+	<h3>There are no products in this category</h3>
 <% else %>
-  <div class="row">
-    <% @products.each do |product| %>
-    <div class="col-md-3">
-      <a href="/products/ <%= product.id %>">
-        <%= image_tag product.product_img.url(:product_index), class: "product" %>
-      </a>
-    </div>
-  </div>
-  <% end %>
+	<div class="row">
+		<% @products.each do |product| %>
+			<div class="col-md-3">
+				<a href="/products/ <%= product.id %>">
+					<%= image_tag product.product_img.url(:product_index), class: "product" %>
+				</a>
+			</div>
+		<% end %>
+	</div>
 <% end %>
