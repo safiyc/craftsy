@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-superuser = User.new
-superuser.admin = true
-superuser.email = "user1@email.com"
-superuser.password = "password"
-superuser.password_confirmation = "password"
-superuser.save!
+admin = User.new
+admin.admin = true
+admin.email = "admin@email.com"
+admin.password = "password"
+admin.password_confirmation = "password"
+admin.save!
 
 category = [
   "Art",
