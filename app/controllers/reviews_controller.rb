@@ -6,9 +6,9 @@ class ReviewsController < ApplicationController
     end
 
     def create
-      @review = Review.new(product_params)
+      @review = Review.new(review_params)
       @review.product_id = @product.id
-      @review.user_id = @current_user.id
+      @review.user_id = current_user.id
 
       if @review.save
         redirect_to product_path(@product)
