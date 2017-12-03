@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   belongs_to :user
   belongs_to :category
+  has_many :reviews
 
   validates :name, :desc, :price, :presence => true
   validates_format_of :price, :with => /\A\d{1,4}(.\d{0,2})?\z/

@@ -1,4 +1,8 @@
 FactoryBot.define do
+  factory :review do
+    rating 1
+    comment "MyText"
+  end
   factory :category do
     name "Clothing"
   end
