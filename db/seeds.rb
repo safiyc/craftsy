@@ -5,3 +5,33 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+superuser = User.new
+superuser.admin = true
+superuser.email = "user1@email.com"
+superuser.password = "password"
+superuser.password_confirmation = "password"
+superuser.save!
+
+category = [
+  "Art",
+  "Accessories",
+  "Home",
+  "Plushies"
+]
+
+product = [
+  [ "Wooden Spatula", "This spatula is made from redwood.", 7, 1, 3, "wooden_spatula.jpg", "image/jpeg"],
+  [ "Kirbys", "These Kirby plushies are super adorable.", 9, 1, 4, "plushy1.jpg", "image/jpeg"],
+  [ "Leather Bag", "This handcrafted bag combines style with sturdiness to make for a great daily use.", 25, 1, 2, "accessory1.jpg", "image/jpeg"],
+  [ "Silver Charm Bracelet", "Simple and elegant. A great gift for your special someone.", 13, 1, 2, "accessory2.jpg", "image/jpeg"],
+  [ "Pokemon", "Eevee, one of the original Pokemons. Super cute.", 9, 1, 4, "plushy3.jpg", "image/jpeg"],
+]
+
+category.each do |name|
+  Category.create( name: name )
+end
+
+product.each do |name, desc, price, user_id, category_id, img_name, img_type|
+  Product.create( name: name, desc: desc, price: price, user_id: user_id, category_id: category_id, product_img_file_name: img_name, product_img_content_type: img_type )
+end
