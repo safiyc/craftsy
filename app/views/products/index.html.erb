@@ -11,10 +11,16 @@
 				<br>
 				<br>
 				<div class="text-centered">
-					<p><%= product.name %></p>
-					<p>$<%= product.price %></p>
+					<p><%= product.name %> | <%= number_to_currency product.price %></p>
 				</div>
 				</a>
+				<% if user_signed_in? %>
+					<%= form_for @order_item do |f| %>
+						<%= f.hidden_field :product_id, value: product.id %>
+						<%= f.number_field :quantity %>
+						<%= f.submit "Add to cart" %>
+					<% end %>
+				<% end %>
 			</div>
 		<% end %>
 	</div>
