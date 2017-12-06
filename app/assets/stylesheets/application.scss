@@ -144,3 +144,8 @@ p.alert, p.notice {
 		margin-top: 0;
 	}
 }
+
+// removes special characters from signup page bc of simple_form
+abbr[title="required"] {
+  display: none;
+}
