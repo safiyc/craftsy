@@ -1,4 +1,7 @@
 FactoryBot.define do
+  factory :order_status do
+    name "MyString"
+  end
   factory :review do
     rating 3
     comment 'This is a review comment.'
