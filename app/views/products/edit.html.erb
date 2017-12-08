@@ -1,11 +1,12 @@
 <h1>Edit Product</h1>
 
 <%= simple_form_for @product, html: {multipart: true} do |f| %>
-  <% f.file_field :product_img %>
+  <%= f.file_field :product_img %>
+  <br>
   <%= f.select :category_id, @categories %>
   <%= f.input :name, label: "Product" %>
   <%= f.input :desc, label: "Description" %>
-  <%= f.input :price, placeholder: "please enter as 0.00 currency format" %>
+  <%= f.input :price %>
   <%= f.button :submit %>
 <% end %>
 

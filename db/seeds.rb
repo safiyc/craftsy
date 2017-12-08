@@ -28,17 +28,6 @@ product = [
   ["Pokemon", "Eevee, one of the original Pokemons. Super cute.", 10.25, 1, 4, "plushy3.jpg", "image/jpeg"],
 ]
 
-order_status = [
-  "In Progress",
-  "Placed",
-  "Shipped",
-  "Cancelled"
-]
-
-order_status.each do |name|
-  Order_status.create( name: name )
-end
-
 category.each do |name|
   Category.create( name: name )
 end
