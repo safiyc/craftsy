@@ -23,8 +23,10 @@ category = [
 product = [
   ["Kirbys", "These Kirby plushies are super adorable.", 5.50, 1, 4, "plushy1.jpg", "image/jpeg"],
   ["Wooden Spatula", "This spatula is made from redwood.", 7.50, 1, 3, "wooden_spatula.jpg", "image/jpeg"],
-  ["Leather Bag", "This handcrafted bag combines style with sturdiness to make for a great daily use.", 25.99, 1, 2, "accessory1.jpg", "image/jpeg"],
+  ["Leather Bag", "This handcrafted bag combines style with sturdiness to make for a great daily use.", 25.99, 1, 2, "accessory3.jpg", "image/jpeg"],
   ["Silver Charm Bracelet", "Simple and elegant. A great gift for your special someone.", 14.49, 1, 2, "accessory2.jpg", "image/jpeg"],
+  ["Pokemon", "Eevee, one of the original Pokemons. Super cute.", 10.25, 1, 4, "plushy3.jpg", "image/jpeg"],
+  ["Pokemon", "Eevee, one of the original Pokemons. Super cute.", 10.25, 1, 4, "plushy3.jpg", "image/jpeg"],
   ["Pokemon", "Eevee, one of the original Pokemons. Super cute.", 10.25, 1, 4, "plushy3.jpg", "image/jpeg"],
 ]
 
@@ -32,6 +34,7 @@ category.each do |name|
   Category.create( name: name )
 end
 
+# product_img is product_img_file_name... is a paperclip gem thing
 product.each do |name, desc, price, user_id, category_id, img_name, img_type|
-  Product.create( name: name, desc: desc, price: price, user_id: user_id, category_id: category_id, product_img_file_name: img_name, product_img_content_type: img_type )
+  Product.create( name: name, desc: desc, price: price, user_id: user_id, category_id: category_id, product_img: File.new("app/assets/images/#{img_name}"), product_img_content_type: img_type )
 end
