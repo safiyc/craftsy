@@ -45,6 +45,7 @@ p.alert, p.notice {
 	font-family: 'Lato', sans-serif;
 	text-transform: uppercase;
 }
+
 .navbar-default {
 	background-color: #fff;
 	padding-bottom: 5px;
@@ -59,7 +60,6 @@ p.alert, p.notice {
 	}
 
 	.navbar-header {
-
 		.navbar-brand {
 			color: #edb544;
 			letter-spacing: 1.4px;
@@ -67,7 +67,6 @@ p.alert, p.notice {
 			font-size: 2.3em;
 			font-weight: bold;
 		}
-
 	}
 
 	.dropdown-menu > li > a:hover {
@@ -79,7 +78,6 @@ p.alert, p.notice {
 		background-color: darken(#bdbdbd, 5%);
 		color: #fff;
 	}
-
 }
 
 .dropdown-menu > .active > a {
@@ -145,7 +143,19 @@ p.alert, p.notice {
 	}
 }
 
+footer {
+	text-align: center;
+	height: 20px;
+	margin-top: auto;
+}
+
 // removes special characters from signup page bc of simple_form
 abbr[title="required"] {
   display: none;
+}
+
+// Devise mssg when logging in/out and signing up
+.notice {
+	text-align: right;
+	padding: 0 25px;
 }
