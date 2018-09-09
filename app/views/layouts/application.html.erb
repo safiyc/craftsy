@@ -21,6 +21,9 @@
 									<%= link_to category.name, products_path(category: category.name), class: "link" %>
 								</li>
 							<% end %>
+							<li>
+								<%= link_to "All Products", products_path(Category.all), class: "link" %>
+							</li>
 						</ul>
 					</li>
 					<% if current_user && current_user.admin %>

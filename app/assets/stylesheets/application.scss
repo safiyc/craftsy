@@ -20,6 +20,7 @@
 .product {
   height: 150px;
   width: 150px;
+  text-decoration: none;
 }
 
 .product-show {
@@ -146,7 +147,7 @@ p.alert, p.notice {
 footer {
 	text-align: center;
 	height: 20px;
-	margin-top: auto;
+	margin-top: 40px;
 }
 
 // removes special characters from signup page bc of simple_form
