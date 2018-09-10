@@ -17,10 +17,24 @@
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
 
+ body {
+	 position: relative;
+	 min-height: 98vh;
+	 margin: 0;
+ }
+
+ footer {
+	 position: absolute;
+	 bottom: 0;
+	 height: 20px;
+	 width: 100%;
+	 text-align: center;
+	 padding-top: 20px;
+ }
+
 .product {
   height: 150px;
   width: 150px;
-  text-decoration: none;
 }
 
 .product-show {
@@ -29,11 +43,21 @@
 }
 
 .text-centered {
-  text-align: center
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.text-centered > a {
+	text-decoration: none;
+	color: black;
+}
+
+.text-centered > a:hover {
+	color: #edb544;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Lato', 'Arial', sans-serif;
 	font-weight: 200;
 	text-transform: uppercase;
 }
@@ -43,12 +67,12 @@ p.alert, p.notice {
 }
 
 .navbar {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Lato', 'Arial', sans-serif;
 	text-transform: uppercase;
 }
 
 .navbar-default {
-	background-color: #fff;
+	background-color: white;
 	padding-bottom: 5px;
 	padding-top: 5px;
 
@@ -142,12 +166,6 @@ p.alert, p.notice {
   h2 {
 		margin-top: 0;
 	}
-}
-
-footer {
-	text-align: center;
-	height: 20px;
-	margin-top: 40px;
 }
 
 // removes special characters from signup page bc of simple_form

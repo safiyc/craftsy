@@ -36,11 +36,11 @@ This program lets the provided admin user add/update/delete products and delete 
 
 ## Links
 
-#### Launch Program - <a href="https://value-crafts.herokuapp.com" target="_blank" markdown="1">Value Crafts</a>
+#### Launch Program - [Value Crafts](https://value-crafts.herokuapp.com)
 
-#### <a href="https://github.com/safiyc/craftsy.git" target="_blank" markdown="1">Github Page</a>
+#### [Github Repo](https://github.com/safiyc/craftsy.git)
 
-#### <a href="http://www.safiycham.com/" target="_blank" markdown="1">Portfolio Website</a>
+#### [Portfolio Website](http://www.safiycham.com/)
 
 ## Contact Info
 

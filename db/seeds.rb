@@ -21,7 +21,7 @@ category = [
 ]
 
 product = [
-  ["Neck Decorator", "Ornaments to make your presence a source of envy for all women... and men.", 24.99, 1, 2, "accessory1.jpg", "image/jpeg"],
+  ["Neck Decorator", "An ornament to make your presence a source of envy to all women... and men.", 24.99, 1, 2, "accessory1.jpg", "image/jpeg"],
   ["Wooden Spatula", "This spatula is made from redwood.", 7.50, 1, 3, "wooden_spatula.jpg", "image/jpeg"],
   ["Leather Bag", "This handcrafted bag combines style with sturdiness to make for a great daily use.", 25.99, 1, 2, "accessory3.jpg", "image/jpeg"],
   ["Silver Charm Bracelet", "Simple and elegant. A great gift for your special someone.", 14.49, 1, 2, "accessory2.jpg", "image/jpeg"],
@@ -29,6 +29,8 @@ product = [
   ["Eevee", "Eevee, one of the original Pocket Monsters. Super cute.", 10.49, 1, 4, "plushy3.jpg", "image/jpeg"],
   ["Green Fluff", "When its belly is pressed, even more cuteness awaits.", 10.49, 1, 4, "plushy2.jpg", "image/jpeg"],
   ["Kirbies", "These balls of cuteness will melt the coldest of hearts.", 8.29, 1, 4, "plushy1.jpg", "image/jpeg"],
+  ["Apple Cider VS Fruit Punch", "Simple and elegant. A great piece to hang in the bathroom.", 14.49, 1, 1, "painting2.jpg", "image/jpeg"],
+  ["Wooden Bowl", "This spatula is made from redwood.", 7.50, 1, 3, "wooden_bowl.jpg", "image/jpeg"],
 ]
 
 category.each do |name|

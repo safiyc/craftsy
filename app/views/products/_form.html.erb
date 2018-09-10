@@ -1,7 +1,7 @@
 <%= simple_form_for @product do |f| %>
   <%= f.file_field :product_img %>
   <br>
-  <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category") %>
+  <%= select_tag(:category_id, options_for_select(@categories)) %>
   <%= f.input :name, label: "Product" %>
   <%= f.input :desc, label: "Description" %>
   <%= f.input :price %>
