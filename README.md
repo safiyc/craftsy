@@ -26,9 +26,7 @@ This program lets the provided admin user add/update/delete products and delete 
 
 ## Known Bugs
 
-* Star rating system doesnt work in production, but it works in development
-
-* Admin can add product, but the product image doesn't display. This feature works in the development environment, but not in production
+* Star rating (ratyrate) works in development, but not in production (heroku)
 
 ## Pending Features
 

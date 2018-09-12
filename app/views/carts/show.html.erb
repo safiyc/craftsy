@@ -1,11 +1,24 @@
 <% if @order_items.any? %>
-
-  <% @order_items.each do |item| %>
-    <p><%= item.product.name %></p>
-    <p><%= link_to "Edit", edit_order_item_path(item) %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"} %></p>
-    <p> Unit Price: <%= number_to_currency item.product.price %> | Quantity: <%= item.quantity %> | Total Price: <%= number_to_currency (item.product.price * item.quantity) %></p>
+  <% if @order_items.any? %>
+    <% items = Array.new %>
+    <% @order_items.each do |item| %>
+      <% items.push(item.quantity) %>
+    <% end %>
+    <p><strong>Total Quantity:</strong> <%= items.sum %></p>
   <% end %>
-  <p>Your Total: <%= number_to_currency current_order.total_price %></p>
+  <br>
+  <% @order_items.each do |item| %>
+    <p><strong><%= item.product.name %></strong>&nbsp;&nbsp;&nbsp;<%= link_to "Edit", edit_order_item_path(item) %>&nbsp;&nbsp;<%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"} %>
+    <br>
+    <strong>Unit Price:</strong> <%= number_to_currency item.product.price %>
+    <br>
+    <strong>Quantity:</strong> <%= item.quantity %>
+    <br>
+    <strong>Total Price:</strong> <%= number_to_currency (item.product.price * item.quantity) %></p>
+  <% end %>
+  <br>
+  <p><strong>Your Total:</strong> <%= number_to_currency current_order.total_price %></p>
 <% else %>
   <p>Your shopping cart is empty.</p>
 <% end %>
+<br>

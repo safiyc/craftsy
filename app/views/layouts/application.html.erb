@@ -4,6 +4,7 @@
     <title>Value Crafts</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<link rel="icon" type="image/png" href="/assets/my_favicon.png">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
@@ -33,7 +34,12 @@
 				<ul class="nav navbar-nav navbar-right">
 					<% if user_signed_in? %>
 						<small><%= current_user.email %></small>
-						<li><%= link_to "Cart", cart_path %></li>
+						<% if !current_user.admin %>
+							<li>
+								<%-# will implement display qty here, next to Cart -%>
+								<%= link_to "Cart", cart_path %>
+							</li>
+						<% end %>
 						<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
 					<% else %>
 						<li><%= link_to "Sign Up", new_user_registration_path %></li>
@@ -53,5 +59,8 @@
 		<footer>
 			<a href="http://www.safiycham.com/" target="_blank">Safiy&nbsp;Cham&nbsp;&#169;&nbsp;2018</a>
 		</footer>
+
+		<%-# below tag is part of solution to get ratyrate to work; then, must run rake assets:precompile, commit, push -%>
+		<%-#<%= javascript_include_tag 'ratyrate.js', "data-turbolinks-track" => false %>
   </body>
 </html>
