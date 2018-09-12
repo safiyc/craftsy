@@ -26,7 +26,7 @@ This program lets the provided admin user add/update/delete products and delete 
 
 ## Known Bugs
 
-* Star rating (ratyrate) works in development, but not in production (heroku)
+* No known bugs
 
 ## Pending Features
 
