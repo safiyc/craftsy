@@ -24,17 +24,13 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-12">
-    <div class="reviews">
-      <h1>Reviews</h1>
-      <%= render @product.reviews %>
-      <div>
-        <% if current_user && (current_user.admin == false) %>
-          <%= link_to "Add Review", new_product_review_path(@product), class: "btn-custom" %>
-        <% end %>
-      </div>
-    </div>
+<div class="reviews">
+  <h1>Reviews</h1>
+  <%= render @product.reviews %>
+  <div>
+    <% if current_user && (current_user.admin == false) %>
+      <%= link_to "Add Review", new_product_review_path(@product), class: "btn-custom" %>
+    <% end %>
   </div>
 </div>
 <hr>
