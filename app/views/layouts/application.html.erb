@@ -2,44 +2,46 @@
 <html>
   <head>
     <title>Value Crafts</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 		<link rel="icon" type="image/png" href="/assets/my_favicon.png">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <nav class="navbar navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					<%= link_to "Value Crafts", root_path, class: "navbar-brand"  %>
-				</div>
-				<ul class="nav navbar-nav">
+		<header>
+			<div>
+				<p class="notice"><%= notice %></p>
+				<% if alert %>
+					<p class="alert"><%= alert %></p>
+				<% end %>
+			</div>
+			<div class="nav_links">
+				<%= link_to "Value Crafts", root_path, class: "site_title" %>
+				<ul class="nav_links_left">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<% Category.all.each do |category| %>
 								<li class="<%= 'active' if params[:category] == category.name %>">
-									<%= link_to category.name, products_path(category: category.name), class: "link" %>
+									<%= link_to category.name, products_path(category: category.name) %>
 								</li>
 							<% end %>
 							<li>
-								<%= link_to "All Products", products_path(Category.all), class: "link" %>
+								<%= link_to "All Products", products_path(Category.all) %>
 							</li>
 						</ul>
 					</li>
 					<% if current_user && current_user.admin %>
-						<li><%= link_to "Add Product", new_product_path %></li>
+						<li class="product_or_cart"><%= link_to "Add Product", new_product_path %></li>
+					<% elsif current_user && !current_user.admin %>
+						<%# will implement display qty here, next to Cart %>
+						<li class="product_or_cart"><%= link_to "Cart", cart_path %></li>
 					<% end %>
 				</ul>
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav_links_right">
 					<% if user_signed_in? %>
-						<small><%= current_user.email %></small>
-						<% if !current_user.admin %>
-							<li>
-								<%-# will implement display qty here, next to Cart -%>
-								<%= link_to "Cart", cart_path %>
-							</li>
-						<% end %>
+						<li class="user"><%= current_user.email %></li>
 						<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
 					<% else %>
 						<li><%= link_to "Sign Up", new_user_registration_path %></li>
@@ -47,20 +49,13 @@
 					<% end %>
 				</ul>
 			</div>
-    </nav>
-		<div style="display: block; text-align: center; color: grey; font-size=2.5rem;">For demonstration purpose: sign up to add products to cart or rate and review products. Log in as an admin to add/delete products and remove reviews.</div>
-    <div>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
-    <div class="container">
+    </header>
+		<div style="margin-top: 5px; text-align: center; color: grey; font-size: 1.25rem;">For demonstration purpose: sign up to add products to cart or rate and review products. Log in as an admin to add/delete products and remove reviews.</div>
+    <section>
       <%= yield %>
-    </div>
+    </section>
 		<footer>
 			<a href="http://www.safiycham.com/" target="_blank">Safiy&nbsp;Cham&nbsp;&#169;&nbsp;2018</a>
 		</footer>
-
-		<%-# below tag is part of solution to get ratyrate to work; then, must run rake assets:precompile, commit, push -%>
-		<%-#<%= javascript_include_tag 'ratyrate.js', "data-turbolinks-track" => false %>
   </body>
 </html>

@@ -17,10 +17,27 @@
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
 
+body, html {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+}
+
 body {
 	position: relative;
-	min-height: 98vh;
-	margin: 0;
+}
+
+header {
+	font-family: 'Lato', 'Arial', sans-serif;
+	text-transform: uppercase;
+	border-bottom: .15rem solid lightgrey;
+	border-radius: .5rem;
+	padding: 1rem;
+	padding-bottom: 0;
+}
+
+section {
+	width: 100vw;
 }
 
 footer {
@@ -30,6 +47,60 @@ footer {
 	width: 100%;
 	text-align: center;
 	padding-top: 20px;
+}
+
+a {
+	color: rgb(131, 131, 131);
+}
+
+a:hover {
+	color: rgb(66, 66, 66);
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	color: rgb(131, 131, 131);
+	padding: 0 8px;
+	line-height: inherit;
+	vertical-align: middle;
+}
+
+.nav_links {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10px;
+}
+
+.site_title {
+	color: #edb544;
+	font-size: 4rem;
+	font-weight: bolder;
+	white-space: nowrap;
+}
+
+.site_title:hover {
+	color: #edb544;
+}
+
+.nav_links_left {
+	display: flex;
+	align-items: flex-end;
+	white-space: nowrap;
+}
+
+.nav_links_right {
+	display: flex;
+	align-items: flex-end;
+	margin-left: auto;
+	white-space: nowrap;
+}
+
+.dropdown {
+	height: fit-content;
 }
 
 .products {
@@ -79,7 +150,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p.alert, p.notice {
+	color: rgb(131, 131, 131);
 	margin: 0;
+	padding-right: 1.4rem;
+	font-size: 1rem;
+	height: 1rem;
 }
 
 .navbar {
@@ -195,13 +270,59 @@ abbr[title="required"] {
 	padding: 0 25px;
 }
 
-@media only screen and (max-width: 768px) {
+// doesnt work right
+@media only screen and (max-width: 600px) {
+	.nav_links {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 5px;
+	}
+
+	.site_title {
+		color: #edb544;
+		font-size: 2rem;
+		font-weight: bolder;
+		white-space: nowrap;
+		order: 1;
+	}
+
+	.nav_links_left {
+		white-space: nowrap;
+		padding-left: unset;
+		font-size: 1rem;
+		order: 3;
+		align-self: stretch;
+
+		width: 100%;
+	}
+
+	.product_or_cart {
+		min-width: 60px;
+		background: white;
+	}
+
+	.nav_links_right {
+		flex-direction: column;
+		white-space: nowrap;
+		padding-left: unset;
+		font-size: 1rem;
+		order: 2;
+	}
+	.user {
+		font-size: .8rem;
+	}
+
+	p.alert, p.notice {
+		padding-right: 1rem;
+		font-size: .75rem;
+	}
+
 	.products {
 		flex-direction: column;
 	}
 
 	.product_sec {
-		width: 350px;
+		width: 300px;
 		margin: 0 auto;
 	}
 
