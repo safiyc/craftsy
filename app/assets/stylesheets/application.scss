@@ -37,7 +37,7 @@ header {
 }
 
 section {
-	width: 100vw;
+
 }
 
 footer {
@@ -110,7 +110,7 @@ li {
 }
 
 .product_sec {
-	width: 250px;
+	width: 30rem;
 }
 
 .product {
@@ -322,12 +322,20 @@ abbr[title="required"] {
 	}
 
 	.product_sec {
-		width: 300px;
 		margin: 0 auto;
 	}
 
+	.text-centered {
+		border-bottom: .1rem solid lightgrey;
+		border-radius: .5rem;
+	  }
+
 	a .product {
-		height: 300px;
-		width: 300px;
+		height: 20rem;
+		width: 20rem;
+	}
+
+	.name_price {
+		font-size: 2rem;
 	}
 }

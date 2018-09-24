@@ -11,7 +11,7 @@
 						<%= image_tag product.product_img.url(:product_index), class: "product" %>
 					<br>
 					<br>
-					<p><%= product.name %> | <%= number_to_currency product.price %></p>
+					<p class="name_price"><%= product.name %> <%= number_to_currency product.price %></p>
 					</a>
 				</div>
 				<div style="text-align: center; margin-top: 5px;">
